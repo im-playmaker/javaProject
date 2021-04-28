@@ -61,9 +61,9 @@ public class LoginController implements Initializable {
                 Parent root;
                 logged=u;
                 if(u.getCompteType().equals("admin")){
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("ShowPersonnes.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("dashboard.fxml"));
                 root = loader.load();
-                ShowPersonnesController ad = loader.getController();
+                DashboardController ad = loader.getController();
                 }else {
                     FXMLLoader loader = new FXMLLoader(getClass().getResource("Profile.fxml"));
                      root = loader.load();

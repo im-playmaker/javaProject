@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="591.0" prefWidth="869.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="hexclan.gui.DashboardController">
+   <children>
+      <TabPane prefHeight="200.0" prefWidth="876.0" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab onSelectionChanged="#users" text="Users">
+              <content>
+                <AnchorPane fx:id="users" minHeight="0.0" minWidth="0.0" prefHeight="365.0" prefWidth="549.0" />
+              </content>
+            </Tab>
+            <Tab onSelectionChanged="#logement" text="Logement">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+            <Tab onSelectionChanged="#Profil" text="Profil">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+      <Pane fx:id="container" layoutX="7.0" layoutY="35.0" prefHeight="591.0" prefWidth="943.0" />
+   </children>
+</AnchorPane>
