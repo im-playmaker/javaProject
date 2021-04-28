@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="605.0" prefWidth="991.0" style="-fx-background-color: blue;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication1.FXMLDocumentController">
+    <children>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <TabPane layoutX="11.0" layoutY="89.0" prefHeight="475.0" prefWidth="962.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Résevation">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tableReservation" layoutX="7.0" layoutY="21.0" onMouseClicked="#getSelected" prefHeight="405.0" prefWidth="646.0">
+                          <columns>
+                            <TableColumn fx:id="idReservation" prefWidth="75.0" text="Id " />
+                            <TableColumn fx:id="IdClientReservation" prefWidth="75.0" text="IdClient" />
+                              <TableColumn fx:id="IdLogReservation" prefWidth="75.0" text="IdLog" />
+                              <TableColumn fx:id="dateDebutReservation" prefWidth="75.0" text="dateDebut" />
+                              <TableColumn fx:id="dateFinReservation" prefWidth="75.0" text="dateFin" />
+                              <TableColumn fx:id="NombreNuitsReservation" prefWidth="75.0" text="NombreNuits" />
+                              <TableColumn fx:id="NombrePersonnesReservation" prefWidth="123.0" text="NombrePersonnes" />
+                          </columns>
+                        </TableView>
+                        <javafx.scene.control.TextField fx:id="IdClientTexteReservation" layoutX="688.0" layoutY="69.0" prefHeight="32.0" prefWidth="231.0" promptText="idClient" />
+                        <javafx.scene.control.TextField fx:id="IdLogTexteReservation" layoutX="688.0" layoutY="109.0" prefHeight="32.0" prefWidth="231.0" promptText="IdLog" />
+                        <javafx.scene.control.TextField fx:id="NombreNuitsTexteReservation" layoutX="688.0" layoutY="224.0" prefHeight="32.0" prefWidth="231.0" promptText="NombreNuits" />
+                        <javafx.scene.control.TextField fx:id="NombrePersonnesTexteReservation" layoutX="687.0" layoutY="265.0" prefHeight="32.0" prefWidth="231.0" promptText="NombrePersonnes" />
+                        <DatePicker fx:id="DateDebutTexteReservation" layoutX="690.0" layoutY="147.0" prefHeight="25.0" prefWidth="225.0" promptText="DateDebut" />
+                        <DatePicker fx:id="DateFinTexteReservation" layoutX="690.0" layoutY="186.0" prefHeight="25.0" prefWidth="225.0" promptText="DateFin" />
+                        <Button layoutX="690.0" layoutY="307.0" mnemonicParsing="false" onAction="#AjouterReservation" text="Ajouter" />
+                        <Button layoutX="767.0" layoutY="307.0" mnemonicParsing="false" onAction="#ModifierReservation" text="Modifier" />
+                        <Button layoutX="849.0" layoutY="307.0" mnemonicParsing="false" onAction="#SupprimerReservation" text="Supprimer" />
+                        <TextField fx:id="rechercheTextReservation" layoutX="687.0" layoutY="30.0" onKeyReleased="#RechercheReservation" prefHeight="26.0" prefWidth="231.0" promptText="Entrez votre recherche" />
+                        <JFXDatePicker fx:id="date1" layoutX="690.0" layoutY="348.0" onKeyReleased="#FiltreRecherche" promptText="Date 1" />
+                        <JFXDatePicker fx:id="date2" layoutX="688.0" layoutY="381.0" onKeyReleased="#FiltreRecherche" promptText="Date 2" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+          <Tab text="Logement">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tableLogement" layoutX="25.0" layoutY="14.0" onMouseClicked="#getSelectedLogement" prefHeight="355.0" prefWidth="545.0">
+                          <columns>
+                            <TableColumn fx:id="IdLogement" prefWidth="75.0" text="Id" />
+                            <TableColumn fx:id="IdAdminLogement" prefWidth="75.0" text="IdAdmin" />
+                              <TableColumn fx:id="NombreEtoileLogement" prefWidth="75.0" text="NombreEtoile" />
+                              <TableColumn fx:id="NomLogement" prefWidth="75.0" text="Nom" />
+                              <TableColumn fx:id="IdCategorieLogement" prefWidth="75.0" text="IdCatégorie" />
+                              <TableColumn fx:id="PrixparNuitLogement" prefWidth="75.0" text="PrixParNuit" />
+                          </columns>
+                        </TableView>
+                        <javafx.scene.control.TextField fx:id="IdAdminTexteLogement" layoutX="609.0" layoutY="40.0" promptText="IdAdmin" />
+                        <javafx.scene.control.TextField fx:id="NombreNuitsTexteLogement" layoutX="609.0" layoutY="89.0" promptText="NombreNuits" />
+                        <javafx.scene.control.TextField fx:id="NomTexteLogement" layoutX="609.0" layoutY="138.0" promptText="Nom" />
+                        <javafx.scene.control.TextField fx:id="IdCatégorieTexteLogement" layoutX="609.0" layoutY="192.0" promptText="IdCatégorie" />
+                        <javafx.scene.control.TextField fx:id="PrixParNuitsTexteLogement" layoutX="609.0" layoutY="248.0" promptText="PrixParNuit" />
+                        <Button layoutX="616.0" layoutY="301.0" mnemonicParsing="false" onAction="#AjouterLogement" text="Ajouter" />
+                        <Button layoutX="706.0" layoutY="301.0" mnemonicParsing="false" onAction="#ModifierLogement" text="Modifier" />
+                        <Button layoutX="796.0" layoutY="301.0" mnemonicParsing="false" onAction="#SupprimerLogement" text="Supprimer" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Catégorie">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tableCategorie" layoutX="42.0" layoutY="35.0" prefHeight="264.0" prefWidth="388.0">
+                          <columns>
+                            <TableColumn fx:id="typeCategorie" prefWidth="75.0" text="type" />
+                          </columns>
+                        </TableView>
+                        <Button layoutX="481.0" layoutY="287.0" mnemonicParsing="false" onAction="#AjouterCatégorie" text="Ajouter" />
+                        <Button layoutX="578.0" layoutY="287.0" mnemonicParsing="false" onAction="#ModifierCatègorie" text="Modifier" />
+                        <Button layoutX="669.0" layoutY="287.0" mnemonicParsing="false" onAction="#SupprimerCatégorie" text="Supprimer" />
+                        <javafx.scene.control.TextField fx:id="typeTexteCatégorie" layoutX="507.0" layoutY="67.0" promptText="type" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Label layoutX="56.0" layoutY="32.0" text="Réservation">
+         <font>
+            <Font name="Cooper Black" size="35.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="21.0" layoutY="566.0" onAction="#TrieParId" text="Trie par Id" />
+      <JFXButton layoutX="141.0" layoutY="566.0" onAction="#TrieParNbrNuits" text="Trie par Nombre de nuits" />
+      <JFXButton layoutX="352.0" layoutY="566.0" onAction="#TrieParIdLog" text="Trie par Id du logement" />
+      <Button layoutX="541.0" layoutY="568.0" mnemonicParsing="false" onAction="#Imprimer" prefHeight="32.0" prefWidth="114.0" text="Imprimer" />
+    </children>
+</AnchorPane>
