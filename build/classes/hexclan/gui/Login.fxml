@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="hexclan.gui.LoginController">
+   <children>
+      <TextField fx:id="txtAdresse" layoutX="241.0" layoutY="132.0" />
+      <Button fx:id="btnConnect" layoutX="221.0" layoutY="255.0" mnemonicParsing="false" onAction="#login" text="Connecter" />
+      <Button fx:id="btnnewAccount" layoutX="328.0" layoutY="255.0" mnemonicParsing="false" onAction="#newAccount" text="Créer un compte" />
+      <Label layoutX="163.0" layoutY="136.0" text="Adresse" />
+      <Label layoutX="147.0" layoutY="189.0" text="Mot de passe" />
+      <Label fx:id="passoubliée" layoutX="256.0" layoutY="220.0" onMouseClicked="#forgetpass" text="Mot de passe oubiée?" />
+      <PasswordField fx:id="txtPass" layoutX="240.0" layoutY="185.0" />
+   </children>
+</AnchorPane>

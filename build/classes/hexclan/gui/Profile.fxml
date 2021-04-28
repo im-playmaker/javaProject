@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="hexclan.gui.ProfileController">
+   <children>
+      <Button fx:id="btnmodifier" layoutX="295.0" layoutY="361.0" mnemonicParsing="false" onAction="#update" prefHeight="25.0" prefWidth="96.0" text="Modifier" />
+      <TextField fx:id="nom" layoutX="268.0" layoutY="20.0" />
+      <TextField fx:id="prenom" layoutX="268.0" layoutY="72.0" />
+      <TextField fx:id="email" layoutX="268.0" layoutY="122.0" />
+      <TextField fx:id="numtel" layoutX="268.0" layoutY="325.0" />
+      <TextField fx:id="cin" layoutX="268.0" layoutY="225.0" />
+      <Label layoutX="186.0" layoutY="24.0" text="Nom" />
+      <Label layoutX="186.0" layoutY="78.0" text="Prenom" />
+      <Label layoutX="186.0" layoutY="128.0" text="Email" />
+      <Label layoutX="166.0" layoutY="277.0" text="Date de naissance" />
+      <Label layoutX="179.0" layoutY="183.0" text="Mot de passe" />
+      <Label layoutX="166.0" layoutY="329.0" text="Num telephone" />
+      <Label layoutX="178.0" layoutY="229.0" text="cin" />
+      <DatePicker fx:id="date" layoutX="268.0" layoutY="273.0" />
+      <Button layoutX="24.0" layoutY="361.0" mnemonicParsing="false" onAction="#retour" text="Retourner" />
+      <PasswordField fx:id="motdepasse" layoutX="268.0" layoutY="179.0" />
+   </children>
+</AnchorPane>
