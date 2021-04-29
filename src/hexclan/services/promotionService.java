@@ -59,11 +59,13 @@ public List <promotion> readAll(int p) {
 if(p!=0)
     req+="and pourcentage < '"+p+"'";
         List <promotion> list=new ArrayList<>();
+         System.out.println("tessssssssst1");
         try {
             ste = conn.createStatement();
            rs= ste.executeQuery(req);
            while(rs.next()){
                list.add(new promotion(rs.getInt(1),rs.getString(2),rs.getInt(3) ,rs.getDate(4),rs.getDate(5)));
+               System.out.println("tessssssssst");
            }
 
         } catch (SQLException ex) {

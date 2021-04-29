@@ -270,6 +270,7 @@ public class VoyageController implements Initializable {
          List<promotion> list=ps.readAll(sliderV);
         vb2=new VBox();
         for (int i = 0; i < list.size(); i++){
+            System.out.println(list.get(i));
         HBox h=new HBox();
         h.setPrefWidth(567);
         h.setPrefHeight(76);
@@ -325,12 +326,13 @@ public class VoyageController implements Initializable {
             initAssocier();
             List <String> list=vs.getMails();
             for (int i = 0; i < list.size(); i++){
-                mailUtil.sendMail(list.get(i),"elyesbensaid1919@gmail.com","bacmath2017", "Announcement",vs.getMessage( v.getId()), null);
+                mailUtil.sendMail(list.get(i),"abassi.seifeddin@esprit.tn","203JMT1815", "Announcement",vs.getMessage( v.getId()), null);
             }
             
         }
             
     }
+    
     private void initAssocier() {
         listP.setVisible(false);
         associerBtn.setVisible(false);

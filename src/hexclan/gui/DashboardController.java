@@ -39,7 +39,7 @@ public class DashboardController implements Initializable {
        
         try {
             
-            Pane newLoadedPane= FXMLLoader.load(getClass().getResource("ShowPersonnes.fxml"));
+            Pane newLoadedPane= FXMLLoader.load(getClass().getResource("stat.fxml"));
             container.getChildren().add(newLoadedPane);
         } catch (IOException ex) {
             Logger.getLogger(DashboardController.class.getName()).log(Level.SEVERE, null, ex);
@@ -113,11 +113,6 @@ public class DashboardController implements Initializable {
         }
     }
 
-    @FXML
-    private void deconnexion(Event event) {
-        
-        
-    }
 
     @FXML
     private void stat(Event event) {
