@@ -56,20 +56,34 @@ public class LoginController implements Initializable {
         UserService us = new UserService();
         User u = new User();
         u = us.findUser(txtAdresse.getText(), txtPass.getText());
+        Parent root;
         if(u != null){
             try {
-                Parent root;
+                
                 logged=u;
                 if(u.getCompteType().equals("admin")){
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("dashboard.fxml"));
                 root = loader.load();
                 DashboardController ad = loader.getController();
+                txtAdresse.getScene().setRoot(root);
                 }else {
+                    if (u.getStatus()==0){
+                         Alert alert = new Alert(Alert.AlertType.ERROR);
+                        alert.setTitle("Impossible de connecter");
+                        alert.setContentText("Votre compte n'est pas activé");
+                        alert.show();
+                        
+                        
+                    }else{
                     FXMLLoader loader = new FXMLLoader(getClass().getResource("Profile.fxml"));
                      root = loader.load();
                     ProfileController ad = loader.getController();
+                    txtAdresse.getScene().setRoot(root);
+                    
+                    }
+                    
                 }
-                txtAdresse.getScene().setRoot(root);
+                
                 
             } catch (IOException ex) {
                 Logger.getLogger(LoginController.class.getName()).log(Level.SEVERE, null, ex);

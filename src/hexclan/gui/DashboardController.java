@@ -76,5 +76,16 @@ public class DashboardController implements Initializable {
             System.out.println("problem container");
         }
     }
+
+    @FXML
+    private void aide(Event event) {
+         try {
+            container.getChildren().clear();
+            Pane newLoadedPane= FXMLLoader.load(getClass().getResource("sample.fxml"));
+            container.getChildren().add(newLoadedPane);
+        } catch (IOException ex) {
+            Logger.getLogger(DashboardController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
     
 }

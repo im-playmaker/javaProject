@@ -25,6 +25,11 @@
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
               </content>
             </Tab>
+            <Tab onSelectionChanged="#aide" text="Aide">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
          </tabs>
       </TabPane>
       <Pane fx:id="container" layoutX="7.0" layoutY="35.0" prefHeight="591.0" prefWidth="943.0" />
