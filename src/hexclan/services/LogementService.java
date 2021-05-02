@@ -64,7 +64,7 @@ public class LogementService {
             preparedStatement.execute();
 
         } catch (SQLException ex) {
-            
+            System.out.println(ex.getMessage());
         }
 
     }
@@ -73,7 +73,7 @@ public class LogementService {
 
         try {
         connection = DB_CONNECTION.getConnect();
-            query = "UPDATE `packabonnement` SET "
+            query = "UPDATE `logement` SET "
                     + "`id_admin`=?,"
                     + "`nbre_etoiles`=?,"
                     + "`nom`=?,"
